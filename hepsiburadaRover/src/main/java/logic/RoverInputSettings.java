@@ -56,7 +56,7 @@ public class RoverInputSettings {
 
     public static void setMatrixWay(Scanner scanner) {
         System.out.println("enter the rover's way : ");
-        String matrixWay = scanner.nextLine().trim().toUpperCase();
+        String matrixWay = scanner.nextLine().trim().toUpperCase().replaceAll("\\s","");
         char[] ways = matrixWay.toCharArray();
         AbstractFactory roverFactory = FactoryProducer.getFactory("rover");
         for (char way : ways) {
